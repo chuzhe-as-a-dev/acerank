@@ -15,7 +15,7 @@ def get_paper_affil_graph(field_prefix):
     cursor = db.cursor()
 
     # find papers in time range
-    sql = "SELECT DISTINCT PaperID FROM %sPaper WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i" % (field_prefix, time_range_start, time_range_end)
+    sql = "SELECT DISTINCT PaperID FROM %sPaper" % (field_prefix)
     cursor.execute(sql)
     qualified_papers = set()
     for row in cursor.fetchall():
@@ -31,7 +31,7 @@ def get_paper_affil_graph(field_prefix):
         if row[0] in qualified_papers:
             outfile.write("%s %s\n" % (row[0], row[1]))
 
-    sql = "SELECT PaperID, AffiliationID FROM %sPaperAuthor WHERE AffiliationID != 'None' AND PaperPublishYear >= %i AND PaperPublishYear <= %i" % (field_prefix, time_range_start, time_range_end)
+    sql = "SELECT PaperID, AffiliationID FROM %sPaperAuthor WHERE AffiliationID != 'None'" % (field_prefix)
     cursor.execute(sql)
 
     # store result to text file
@@ -165,13 +165,22 @@ def get_author_affil(field_prefix):
         WHERE AffiliationID != 'None' AND PaperPublishYear >= %i AND PaperPublishYear <= %i""" % (field_prefix, time_range_start, time_range_end)
     cursor.execute(sql)
 
+    author_affil = {}
+    for row in cursor.fetchall():
+        if row[0] not in author_affil:
+            if row[1] in affil_auth:
+                author_affil[row[0]] = [affil_auth[row[1]], row[1]]
+            else:
+                author_affil[row[0]] = [0.0, row[1]]
+        else:
+            if row[1] in affil_auth and affil_auth[row[1]] > author_affil[row[0]]:
+                author_affil[row[0]] = [affil_auth[row[1]], row[1]]
+
     # save to file
     outfile = open("../data/%s_author_affil" % field_prefix, "w")
-    for row in cursor.fetchall():
-        if row[1] not in affil_auth:
-            outfile.write("%s %s\n" % (row[0], "0"))
-        else:
-            outfile.write("%s %s\n" % (row[0], affil_auth[row[1]]))
+    for author, detail in author_affil.iteritems():
+        outfile.write("%s %f %s\n" % (author, detail[0], detail[1]))
+    outfile.close()
 
     print field_prefix, "down"
 
@@ -256,11 +265,12 @@ def main():
     field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
     for prefix in field_prefixs:
         # a whole procedure must be gone through when time range changes
-        get_paper_affil_graph(prefix)
-        get_citation(prefix)
-        get_core(prefix)
-        get_author_affil(prefix)
-        get_last_factor(prefix)
+        # get_paper_affil_graph(prefix)
+        # get_citation(prefix)
+        # get_core(prefix)
+        # get_author_affil(prefix)
+        # get_last_factor(prefix)
+        pass
 
 
 if __name__ == '__main__':
