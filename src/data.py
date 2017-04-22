@@ -260,6 +260,46 @@ def get_author_detail(field_prefix):
     for row in cursor.fetchall():
         outfile.write("%s %s\n" % (row[0], row[1]))
 
+def get_author_hindex(field_prefix):
+    db = MySQLdb.connect(host="localhost",
+                         user="acerank",
+                         passwd="0000",
+                         db="RisingStar")
+
+    outfile = open("../data/%s_author_hindex" % field_prefix, "w")
+
+    cursor = db.cursor()
+    sql = "SELECT * FROM ( \
+          (SELECT PaperID,AuthorID FROM %sPaperAuthor) s1 \
+          NATURAL JOIN \
+          (SELECT PaperID,COUNT(PaperReferenceID) as cnt \
+          FROM %sPaperReference  \
+          GROUP BY PaperID) s2 \
+          ) ORDER BY AuthorID,cnt DESC;" % (field_prefix,field_prefix)
+
+    cursor.execute(sql)
+    res = cursor.fetchall()
+
+    i = 0
+    while(i < len(res)):
+        author_id = res[i][1]
+        cnt_list = [res[i][2]]
+        while(i + 1 < len(res) and res[i+1][1] == author_id):
+            cnt_list.append(res[i+1][2])
+            i += 1
+        i += 1
+
+        #solve hindex
+        hindex = 1
+        for j in range(len(cnt_list)):
+            if(j + 1 >= cnt_list[j]):
+                hindex = cnt_list[j]
+                break
+
+        outfile.write("%s %d\n" % (author_id, hindex))
+
+    outfile.close()
+
 
 def main():
     field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
@@ -270,6 +310,7 @@ def main():
         # get_core(prefix)
         # get_author_affil(prefix)
         # get_last_factor(prefix)
+        # get_author_hindex(field_prefix)
         pass
 
 
