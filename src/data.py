@@ -290,11 +290,11 @@ def get_author_hindex(field_prefix):
         i += 1
 
         #solve hindex
-        hindex = 1
-        for j in range(len(cnt_list)):
-            if(j + 1 >= cnt_list[j]):
-                hindex = cnt_list[j]
+        hindex = 0
+        while(hindex < len(cnt_list)):
+            if(hindex >= cnt_list[hindex]):
                 break
+            hindex += 1
 
         outfile.write("%s %d\n" % (author_id, hindex))
 
