@@ -1,6 +1,5 @@
 import MySQLdb
 
-
 # inclusive at both end
 time_range_start = 2005
 time_range_end = 2010
@@ -75,7 +74,7 @@ def get_citation(field_prefix):
             FROM %sPaperReference
             GROUP BY PaperReferenceID) as PaperReferenced USING (PaperID)
           WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i
-          GROUP BY AuthorID"""  % (field_prefix, field_prefix, time_range_start, time_range_end)
+          GROUP BY AuthorID""" % (field_prefix, field_prefix, time_range_start, time_range_end)
     cursor.execute(sql)
 
     # store result to text file
@@ -100,10 +99,11 @@ def get_core(field_prefix):
                          passwd="0000",
                          db="RisingStar")
 
-    # record each paper's authors
+    # record each paper's author_ids
     paper_authors = dict()
     cursor = db.cursor()
-    sql = "SELECT PaperID, AuthorID FROM %sPaperAuthor WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i" % (field_prefix, time_range_start, time_range_end)
+    sql = "SELECT PaperID, AuthorID FROM %sPaperAuthor WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i" % (
+    field_prefix, time_range_start, time_range_end)
     cursor.execute(sql)
     for row in cursor.fetchall():
         if row[0] not in paper_authors:
@@ -111,7 +111,7 @@ def get_core(field_prefix):
         else:
             paper_authors[row[0]].append(row[1])
 
-    # find core authors
+    # find core author_ids
     author_cores = dict()
     for authors in paper_authors.values():
         for author in authors:
@@ -130,7 +130,7 @@ def get_core(field_prefix):
             author_core_referenced[author] = 0
             break
 
-        # accumulate core authors' references
+        # accumulate core author_ids' references
         core_referenced = 0
         for coauthor in author_cores[author]:
             if coauthor in author_referenced:
@@ -162,7 +162,8 @@ def get_author_affil(field_prefix):
     sql = """
         SELECT DISTINCT AuthorID, AffiliationID
         FROM %sPaperAuthor
-        WHERE AffiliationID != 'None' AND PaperPublishYear >= %i AND PaperPublishYear <= %i""" % (field_prefix, time_range_start, time_range_end)
+        WHERE AffiliationID != 'None' AND PaperPublishYear >= %i AND PaperPublishYear <= %i""" % (
+    field_prefix, time_range_start, time_range_end)
     cursor.execute(sql)
 
     author_affil = {}
@@ -203,7 +204,8 @@ def get_last_factor(field_prefix):
         author_auth[row[0]] = float(row[1])
 
     # get author's paper data (paper id and 1/author_seq)
-    sql = "SELECT PaperID, AuthorID, 1 / AuthorSequenceNumber FROM %sPaperAuthor WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i" % (field_prefix, time_range_start, time_range_end)
+    sql = "SELECT PaperID, AuthorID, 1 / AuthorSequenceNumber FROM %sPaperAuthor WHERE PaperPublishYear >= %i AND PaperPublishYear <= %i" % (
+    field_prefix, time_range_start, time_range_end)
     cursor.execute(sql)
     author_papers = dict()
     for row in cursor.fetchall():
@@ -220,7 +222,8 @@ def get_last_factor(field_prefix):
         paper_pagerank[row[0]] = float(row[1])
 
     # get paper's venue
-    sql = "SELECT PaperID, NomAuth FROM %sPaper JOIN %sVenueAuth USING (NormalizedVenueName);" % (field_prefix, field_prefix)
+    sql = "SELECT PaperID, NomAuth FROM %sPaper JOIN %sVenueAuth USING (NormalizedVenueName);" % (
+    field_prefix, field_prefix)
     cursor.execute(sql)
     paper_venue_auth = dict()
     for row in cursor.fetchall():
@@ -265,11 +268,11 @@ def main():
     field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
     for prefix in field_prefixs:
         # a whole procedure must be gone through when time range changes
-        # get_paper_affil_graph(prefix)
-        # get_citation(prefix)
-        # get_core(prefix)
-        # get_author_affil(prefix)
-        # get_last_factor(prefix)
+        get_paper_affil_graph(prefix)
+        get_citation(prefix)
+        get_core(prefix)
+        get_author_affil(prefix)
+        get_last_factor(prefix)
         pass
 
 
