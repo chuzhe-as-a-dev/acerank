@@ -8,7 +8,6 @@ GetOptions(
     'host=s' => \$host,
     'user=s' => \$user,
     'password=s' => \$password,
-    'database=s' => \$mag,
     'input=s' => \$input,
     'output=s' => \$output,
 );
