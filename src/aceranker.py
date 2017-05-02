@@ -1,6 +1,7 @@
 import MySQLdb
 import snap
 
+from math import pi, atan
 from time import time
 
 
@@ -392,7 +393,7 @@ class Aceranker:
             self.connection.commit()
 
     @timeit
-    def show_result(self, list_size=100):
+    def show_result(self, citation_threshold=1000, list_size=100):
         for field in self.fields:
             cursor = self.connection.cursor()
             cursor.execute("""SELECT
@@ -404,9 +405,9 @@ class Aceranker:
                               FROM new_AuthorFieldData
                                 JOIN new_AuthorData USING (author_id)
                                 LEFT JOIN new_AffiliationData ON (affiliation_id = affiliation_id_chosen)
-                              WHERE field = %s
+                              WHERE field = %s AND total_citation <= %s
                               ORDER BY ace_rank DESC
-                              LIMIT %s;""", (field, list_size))
+                              LIMIT %s;""", (field, citation_threshold, list_size))
 
             # diaplay result and write to local file
             outfile = open("../result/%s_ranking.txt" % field, "w")
