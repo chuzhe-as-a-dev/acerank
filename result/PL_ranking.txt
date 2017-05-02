@@ -1,0 +1,100 @@
+80317135	mark harman	4514.635943	038AE3AA	brunel university london
+19201BBC	mary jean harrold	3082.796493	07CA5884	georgia institute of technology
+74381F8F	gregg rothermel	2118.075564	03FD8454	university of maryland college park
+7FD35A4C	lionel c briand	1919.164636	004B1FBC	fraunhofer society
+7D4C0E2F	michael ernst	1163.582562	03D00B37	massachusetts institute of technology
+29E1ABD3	audris mockus	1089.375076	4C7A9B63	at t
+808ADBC8	matthew b dwyer	969.530295	4C5370B9	ames research center
+7F886E7C	barbara g ryder	968.785692	4FF45383	ibm
+7D9079E1	andreas zeller	949.198112	05776AD7	saarland university
+81726D6F	t h tse	944.084182	350410CF	university of hong kong
+75874D51	barbara kitchenham	848.980410	03569BD4	keele university
+7D30EA44	gail c murphy	737.869872	0875EA92	university of british columbia
+855FFED2	nachiappan nagappan	727.476875	083839C7	north carolina state university
+0FA216E9	sebastian elbaum	717.107457	06D18AFD	university of nebraska lincoln
+147A0693	martin rinard	704.827840	03D00B37	massachusetts institute of technology
+818A3DCE	giuliano antoniol	698.619902	00F94921	university of sannio
+14592651	thomas reps	695.568599	0810AAFA	university of wisconsin madison
+8104A982	frank tip	691.067284	4FF45383	ibm
+7698A580	alessandro orso	628.031075	07CA5884	georgia institute of technology
+12DAB89A	jonathan i maletic	614.177019	05A45DE2	university of memphis
+80484673	chinyu huang	609.597752	00FF56A8	national taiwan university
+7B3AD69E	alex aiken	578.185593	05C86094	stanford university
+7B4DA5C9	barry boehm	533.861604	4FF45383	ibm
+7A2271D4	andy podgurski	518.194411	03839B48	case western reserve university
+5851D2BB	premkumar devanbu	491.017665	0349EE07	university of california
+7EECF819	james a jones	477.839006	07CA5884	georgia institute of technology
+80945B34	xiangyu zhang	462.406988	0839CEE3	university of arizona
+7EFA6D4B	cormac flanagan	454.872833	0349EE07	university of california
+7F5E2DC9	martin p robillard	451.698421	004CA7A3	mcgill university
+1C6E8D3D	david notkin	428.152579	0C01DCFD	university of washington
+7F2757B5	craig chambers	419.427275	0C01DCFD	university of washington
+0123A7DE	nicolas kicillof	410.211612	None	None
+502BED39	mooly sagiv	402.948797	00FA1C18	tel aviv university
+7DC66AE8	ahmed e hassan	380.699029	090B77B3	university of waterloo
+80BC62F9	jon whittle	372.357216	09B2D407	george mason university
+8003DEEE	doohwan bae	361.759349	09630970	kaist
+0C14B09D	james d herbsleb	353.796420	0477FFD3	carnegie mellon university
+7E6F96E9	james h andrews	346.431948	077EC9E4	university of western ontario
+481DBBF6	ben liblit	326.899956	0810AAFA	university of wisconsin madison
+80FEEE45	tim menzies	323.580880	00B89992	west virginia university
+11883F38	yvan labiche	319.609966	4D2B1EE6	centre national de la recherche scientifique
+0A6DB6E0	paolo tonella	314.733484	None	None
+7FF48467	andrian marcus	313.148893	0B0DA3DC	wayne state university
+7E2EB7EE	betty h c cheng	309.476423	0532D181	michigan state university
+7DE5EBA2	william g griswold	302.046022	0349EE07	university of california
+0312A729	atanas rountev	267.068884	031EE95E	ohio state university
+7C33BA1C	sriram k rajamani	265.366977	4CE6FC2D	microsoft
+7F535E45	monica s lam	259.330487	05C86094	stanford university
+80F7AFD3	dawson r engler	259.256439	05C86094	stanford university
+7877F6A6	thomas a henzinger	252.938394	0349EE07	university of california
+2A5EF2B2	k rustan m leino	244.830121	4CE6FC2D	microsoft
+789561CB	nenad medvidovic	244.798997	0011EAC4	university of southern california
+13A4E9FF	steve easterbrook	242.876539	0B0ADEB6	university of toronto
+78106307	thomas zimmermann	233.043967	05776AD7	saarland university
+75A9C3A9	manuel fahndrich	229.972970	4CE6FC2D	microsoft
+838C82B0	bashar nuseibeh	229.734704	0C33D1B1	queen s university
+7E19A3B6	margaret burnett	229.642254	07D2B6B9	oregon state university
+815F98DC	manuvir das	228.840906	4CE6FC2D	microsoft
+7FA22D7B	mary shaw	227.389076	0477FFD3	carnegie mellon university
+124FD226	sebastian uchitel	221.531504	02D4EDF8	imperial college london
+7271F1CA	tao xie	221.403762	083839C7	north carolina state university
+80865051	rupak majumdar	217.645993	0349EE07	university of california
+10C4C41E	george c necula	214.125274	0349EE07	university of california
+8038DF34	myra b cohen	209.651467	092FD9CF	university of auckland
+8134F226	filippo ricca	206.255071	None	None
+7D4F6074	rajiv gupta	203.597695	0839CEE3	university of arizona
+657CAA27	darko marinov	200.196098	0966B229	university of illinois at urbana champaign
+4926B3D8	axel van lamsweerde	198.914741	05B3DFF1	universite catholique de louvain
+8075E7B2	jeffrey s foster	196.631728	03FD8454	university of maryland college park
+5D1017CA	chandrasekhar boyapati	192.647658	03D00B37	massachusetts institute of technology
+7BCA0939	gregor kiczales	191.730757	4FF45383	ibm
+74E7268E	g ramalingam	191.263749	4FF45383	ibm
+7DD6C90B	dewayne e perry	190.169003	05282E0D	university of texas at austin
+77DFC504	patrice godefroid	187.476561	044C0559	bell labs
+7D54B92D	zhendong su	186.064067	0349EE07	university of california
+848BA3FF	sorin lerner	186.003692	0C01DCFD	university of washington
+07E3215F	thomas j ostrand	184.923607	4F872588	at t labs
+7E5005ED	jongdeok choi	182.099037	4FF45383	ibm
+7E52D890	adam porter	179.623894	03FD8454	university of maryland college park
+79037AE8	don batory	179.256017	05282E0D	university of texas at austin
+7EEABCEB	james c corbett	178.474370	4F5B50D5	university of hawaii
+750C6678	wolfgang emmerich	176.273673	02B09E25	university college london
+7EE06BD5	jonathan aldrich	172.117772	0477FFD3	carnegie mellon university
+292839EF	klaus havelund	172.001152	4C5370B9	ames research center
+7F5DF39A	andre van der hoek	165.947882	0349EE07	university of california
+7C123E67	david garlan	163.148805	0477FFD3	carnegie mellon university
+7F00C490	michael hicks	159.598457	03FD8454	university of maryland college park
+80797269	arie van deursen	156.608413	2BECA4ED	college of western idaho
+7FE706B2	baowen xu	152.253830	04905D15	southeast university
+75E5C1FF	westley weimer	151.588474	05B090CE	university of california berkeley
+427DE9C2	rastislav bodik	150.894214	0810AAFA	university of wisconsin madison
+118F2FF3	todd millstein	149.400873	0C01DCFD	university of washington
+7F724CDF	magne jorgensen	149.359463	008DE9F8	bournemouth university
+09C553D1	emmanuel letier	148.621801	05B3DFF1	universite catholique de louvain
+7E1D46B2	kathryn s mckinley	148.472251	05282E0D	university of texas at austin
+7620DEB3	robyn r lutz	144.146889	0A5DAC76	iowa state university
+8018B2BF	gregorio robles	143.850178	0ADA5E4F	king juan carlos university
+291B2AA3	rajeev alur	143.177038	0349EE07	university of california
+7AA98137	laurie hendren	136.522886	004CA7A3	mcgill university
+81AF4D0C	laurie williams	134.348939	083839C7	north carolina state university

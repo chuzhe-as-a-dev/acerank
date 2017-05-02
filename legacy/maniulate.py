@@ -7,24 +7,38 @@ db = MySQLdb.connect(host="localhost",
 cursor = db.cursor()
 
 # find all related author_ids
-author_ids = []
-cursor.execute("SELECT DISTINCT author_id FROM new_PaperAuthor;")
-for row in cursor.fetchall():
-    author_ids.append(row[0])
+# affiliation_ids = []
+# cursor.execute("SELECT DISTINCT affiliation_id FROM new_PaperAuthor WHERE affiliation_id != 'None';")
+# for row in cursor.fetchall():
+#     affiliation_ids.append(row[0])
+# print "haha"
+#
+# for affiliation_id in affiliation_ids:
+#     cursor.execute("""INSERT INTO new_AffiliationName
+#                       SELECT
+#                         AffiliationID,
+#                         AffiliationName
+#                       FROM new_Affiliations
+#                       WHERE AffiliationID = %s""", (affiliation_id,))
+# db.commit()
+# print "haha"
 
-print "haha"
+fields = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
+for field in fields:
+    cursor.execute("""INSERT INTO new_AffiliationFieldData
+                      SELECT DISTINCT
+                        affiliation_id,
+                        %s,
+                        0
+                      FROM new_PaperAuthor
+                      WHERE affiliation_id != 'None'""", (field,))
+    print "haha", field
 
-for author_id in author_ids:
-    try:
-        cursor.execute("INSERT INTO new_AuthorName SELECT AuthorID, AuthorName FROM new_Authors WHERE AuthorID = %s", (author_id,))
-    except Exception as e:
-        print author_id
-        raise e
+db.commit()
 
-cursor.commit()
 
-field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
-# for prefix in field_prefixs:
+
+# for prefix in fields:
 #     cursor = db.cursor()
 #     # # add paper of fields into a big table
 #     # cursor.execute("""INSERT INTO new_Papers

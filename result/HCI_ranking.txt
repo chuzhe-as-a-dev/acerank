@@ -1,0 +1,100 @@
+7EF737CE	ravin balakrishnan	2607.409015	0B0ADEB6	university of toronto
+7B7BA2CB	carl gutwin	1590.157768	01F1D439	university of saskatchewan
+7C74BA20	steve benford	1474.581725	087AC4EF	university of nottingham
+7BF4B90F	shumin zhai	1334.887735	4FF45383	ibm
+7F56969A	chia shen	1114.485488	0B09F358	mitsubishi electric research laboratories
+7CF1CBD7	hiroshi ishii	941.972162	03D00B37	massachusetts institute of technology
+0115452E	elizabeth d mynatt	904.234916	07CA5884	georgia institute of technology
+7DD7119D	anind k dey	722.225363	0477FFD3	carnegie mellon university
+760EA144	tom rodden	697.496647	087AC4EF	university of nottingham
+24FFA165	gregory d abowd	668.434920	07CA5884	georgia institute of technology
+816B6416	scott e hudson	658.377655	0477FFD3	carnegie mellon university
+10657C19	michel beaudouinlafon	584.228005	4F10C1EB	french institute for research in computer science and automation
+7E30CEF7	brad a myers	569.394842	0477FFD3	carnegie mellon university
+7B7FF7CD	mary czerwinski	568.770043	4CE6FC2D	microsoft
+77CA6129	patrick baudisch	561.196638	4CE6FC2D	microsoft
+78C241A2	clifton forlines	555.529380	0B09F358	mitsubishi electric research laboratories
+5D06C8A1	ken hinckley	484.127856	4CE6FC2D	microsoft
+1E0B243C	rebecca e grinter	445.192497	07CA5884	georgia institute of technology
+8127D2A3	w keith edwards	440.286583	07CA5884	georgia institute of technology
+12FC2C40	jacob o wobbrock	439.620171	0477FFD3	carnegie mellon university
+79FD756B	benjamin b bederson	424.247116	03FD8454	university of maryland college park
+809D24EE	stephen brewster	416.604252	00784876	university of glasgow
+32885C70	paul dourish	400.622785	0C2C9DD2	university of california irvine
+283C4F30	kori inkpen	395.739561	0112E226	simon fraser university
+7A4021F6	roel vertegaal	363.212689	0C33D1B1	queen s university
+7E529F4C	steve whittaker	346.091444	4FF45383	ibm
+7E66CCEC	saul greenberg	337.626927	0A0D2BAD	university of calgary
+7559DEE2	antti oulasvirta	312.148034	01F6ADD2	helsinki institute for information technology
+7E94E8CB	andy crabtree	301.917628	087AC4EF	university of nottingham
+72C408AB	wendy e mackay	293.727887	4F10C1EB	french institute for research in computer science and automation
+7D448E49	andy cockburn	248.214685	0B0E659A	university of canterbury
+76DFC0E1	jun rekimoto	247.720191	None	None
+01C0BF6D	james a landay	246.517632	0C01DCFD	university of washington
+7B200724	daniel wigdor	240.026383	0B0ADEB6	university of toronto
+1209DC06	susan r fussell	236.634098	0477FFD3	carnegie mellon university
+7E1EDCD4	tovi grossman	230.650465	0B0ADEB6	university of toronto
+13DA4F9B	william gaver	227.939925	09DDBC07	royal college of art
+7CEA2ABF	gloria mark	227.535772	0C2C9DD2	university of california irvine
+7DFD2352	tovi grossman	224.220053	0B0ADEB6	university of toronto
+09B55A77	kasper hornbaek	210.949279	0764F090	university of copenhagen
+80A63C70	james fogarty	208.820511	0477FFD3	carnegie mellon university
+0BFC469F	yves guiard	205.551138	4FF45383	ibm
+80F89F78	alex s taylor	205.405824	4CE6FC2D	microsoft
+281D6D72	robert j k jacob	203.562740	03D00B37	massachusetts institute of technology
+32A894D8	edward cutrell	202.223151	4CE6FC2D	microsoft
+81442954	desney s tan	190.463308	4CE6FC2D	microsoft
+81721527	leysia palen	185.088632	0B3CDF24	university of colorado boulder
+7FCB7C7D	yvonne rogers	178.634511	09DC92C5	indiana university bloomington
+7B4D61B3	jodi forlizzi	178.221981	0477FFD3	carnegie mellon university
+7D8079BD	andrew d wilson	178.022068	4CE6FC2D	microsoft
+0029A3E8	ivan poupyrev	175.251567	None	None
+81778752	george g robertson	170.215281	4CE6FC2D	microsoft
+7DDC3018	stacey d scott	166.946039	0A0D2BAD	university of calgary
+0F9B19D3	scott r klemmer	159.315441	05B090CE	university of california berkeley
+863987B3	jennifer mankoff	146.711343	0477FFD3	carnegie mellon university
+7DFE8037	michael muller	140.179384	4FF45383	ibm
+75BE13B1	robert e kraut	136.413141	0477FFD3	carnegie mellon university
+82272168	thomas erickson	134.620233	4FF45383	ibm
+7AD93A86	boriana koleva	132.960643	087AC4EF	university of nottingham
+4966BDAE	laura dabbish	129.042258	0477FFD3	carnegie mellon university
+7E7B001F	i scott mackenzie	126.556510	09F18F79	university of tampere
+774BB1C2	jakob e bardram	126.045474	0C2DEF79	aarhus university
+5D6E2CF0	johnny accot	125.820281	4FF45383	ibm
+24A6BEC5	stuart k card	125.679375	02066FCD	xerox
+7F67D88D	gonzalo ramos	125.145815	4CE6FC2D	microsoft
+7D7318AD	chris greenhalgh	124.692840	087AC4EF	university of nottingham
+1395B286	loren terveen	124.191658	4CE6FC2D	microsoft
+37C0D0B6	allison druin	123.920504	4FF45383	ibm
+7D15643C	shahram izadi	122.810627	4CE6FC2D	microsoft
+7D692F78	jason i hong	115.150999	05B090CE	university of california berkeley
+7F85405D	randy pausch	114.928539	0477FFD3	carnegie mellon university
+781A6EB4	john c tang	113.632483	4FF45383	ibm
+7E8F3649	meredith ringel morris	112.484610	05C86094	stanford university
+0E4BE3F3	sunny consolvo	111.305245	500F4F9C	intel
+7F17012C	kathy ryall	110.406527	0B09F358	mitsubishi electric research laboratories
+85144BB1	saul greenberg	109.611179	0A0D2BAD	university of calgary
+83824ECF	i scott mackenzie	109.001194	09F18F79	university of tampere
+7BED6F80	wendy a kellogg	108.750836	4FF45383	ibm
+7D345879	brian p bailey	107.334752	0966B229	university of illinois at urbana champaign
+2ADC2671	frederic vernier	100.611856	0C33EF81	university of paris
+7CB1038F	ed h chi	99.892617	02066FCD	xerox
+765A4CB8	abigail sellen	96.528334	4CE6FC2D	microsoft
+135F67D1	amy voida	94.236208	07CA5884	georgia institute of technology
+17DC7204	james d hollan	93.906815	0229448F	university of california san diego
+7DBA8558	kristina hook	93.714089	09A1B954	stockholm university
+7FA4D7C8	allison woodruff	91.215543	500F4F9C	intel
+7A39C9F2	bonnie nardi	91.070607	0C2C9DD2	university of california irvine
+82044172	kaping yee	91.006495	05B090CE	university of california berkeley
+7D2C49AB	gillian r hayes	88.532884	07CA5884	georgia institute of technology
+713DD36C	george fitzmaurice	88.239282	0B0ADEB6	university of toronto
+2B7E5609	sara kiesler	86.026017	0477FFD3	carnegie mellon university
+1726498B	r william soukoreff	85.483793	0B78A521	york university
+800C7E62	dan r olsen	83.633573	05F5F76A	brigham young university
+85A333BD	jun rekimoto	82.476006	None	None
+7F9F6AA2	matthew chalmers	80.292656	00784876	university of glasgow
+7CABDC55	terry winograd	78.740878	05C86094	stanford university
+7571C7EA	eric horvitz	78.737994	4CE6FC2D	microsoft
+800027F2	christian heath	78.381850	0AF6A309	king s college london
+7C21B8B8	keith cheverst	77.776537	0404AD5B	lancaster university
+79D7A0DD	kenton ohara	77.750401	0228E4F2	university of bristol

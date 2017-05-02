@@ -1,0 +1,100 @@
+14DC1945	k b letaief	3409.839703	0BF77E37	hong kong university of science and technology
+039CEC0C	georgios b giannakis	3205.317118	07C34834	university of minnesota
+8006F20B	norman c beaulieu	2245.616572	0C33D1B1	queen s university
+7C197C19	andrea goldsmith	2204.595119	05C86094	stanford university
+7FFFBE8D	robert schober	2063.265067	0875EA92	university of british columbia
+8109820E	k j r liu	1935.330140	03FD8454	university of maryland college park
+7DD5DB89	moe z win	1738.074658	03D00B37	massachusetts institute of technology
+75D20539	mohamedslim alouini	1494.981244	07C34834	university of minnesota
+796E8780	mazen o hasna	1443.002679	07C34834	university of minnesota
+29ED30E0	lajos hanzo	1211.652725	0296D744	university of southampton
+7FAC4A60	h v poor	1128.934546	01328BF3	princeton university
+7D7509DE	vijay k bhargava	1064.037913	0875EA92	university of british columbia
+271A7D58	andreas f molisch	985.640838	4ECD74BC	alcatel lucent
+09F2E774	hamid jafarkhani	917.277457	0349EE07	university of california
+75C29F98	michele zorzi	860.724177	0BFFF799	university of ferrara
+6E18A956	ranjan k mallik	822.815312	0999D47E	indian institutes of technology
+7D1295F9	shuguang cui	785.159497	05C86094	stanford university
+80B3A944	ilmin kim	724.412195	03D00B37	massachusetts institute of technology
+02304545	george k karagiannidis	702.474257	01461554	aristotle university of thessaloniki
+80BE7B0E	rohit u nabar	672.316827	05C86094	stanford university
+7945B8D1	don towsley	669.049807	01776B6C	university of massachusetts amherst
+7EA9B3E8	xuemin shen	662.787209	090B77B3	university of waterloo
+7F26F9D8	jeffrey g andrews	653.242976	05C86094	stanford university
+7F942C9A	kaikit wong	645.285552	0BF77E37	hong kong university of science and technology
+7E1FB9D3	zhu han	588.945889	03FD8454	university of maryland college park
+7F17C7C5	syed a jafar	551.804606	0349EE07	university of california
+7DEC9EA2	shengli zhou	524.725455	07C34834	university of minnesota
+771E2668	hari balakrishnan	462.027636	05C86094	stanford university
+80240ADD	qian zhang	461.713969	01328BF3	princeton university
+0F6CB05B	leandros tassiulas	448.985582	03FD8454	university of maryland college park
+0E5F4B5C	helmut bolcskei	437.929273	05C86094	stanford university
+802080A8	ye li	431.660020	07CA5884	georgia institute of technology
+806DCDA9	yi shi	428.057984	3333E44B	virginia tech
+7E90E3CB	john m cioffi	421.819413	05C86094	stanford university
+7C52E731	ness b shroff	398.779739	0D109F83	purdue university
+67A29BC7	marco chiani	391.651911	008ED3A6	university of bologna
+84BFCBA4	xianggen xia	383.132984	0527EA39	university of delaware
+0AA12E30	christian bettstetter	374.846457	070DD5D4	nec
+81246F48	xiaodong cai	366.567556	07C34834	university of minnesota
+7F7A8C8E	murat uysal	361.049485	090B77B3	university of waterloo
+808745B0	yuguang fang	356.995294	070A58AF	new jersey institute of technology
+7A90472D	muriel medard	353.648038	03D00B37	massachusetts institute of technology
+7D77D074	wei yu	353.473004	05C86094	stanford university
+79B523B7	ross d murch	351.686914	0BF77E37	hong kong university of science and technology
+7A2EAB81	kin k leung	348.034308	4ECD74BC	alcatel lucent
+023DAA19	ian f akyildiz	337.400435	07CA5884	georgia institute of technology
+71D46FA7	ekram hossain	334.015265	043F7F1E	victoria university australia
+80C0034C	kang g shin	314.471066	01A8C383	university of michigan
+805E3DBB	li li	312.327980	05E79D01	tsinghua university
+14C1E392	david e culler	299.998167	0349EE07	university of california
+80D58ED8	ion stoica	299.438003	0349EE07	university of california
+7CEDBECA	weifeng su	299.007659	03FD8454	university of maryland college park
+7CFCC0B4	neelesh b mehta	295.812892	05C86094	stanford university
+7F4E5085	weihua zhuang	292.612525	090B77B3	university of waterloo
+10C79F59	anthony ephremides	288.935732	03FD8454	university of maryland college park
+7D1C3B16	dong in kim	285.865357	0112E226	simon fraser university
+83174548	chintha tellambura	280.253247	093456D7	university of alberta
+77B8DA41	sonia aissa	276.967057	025A7177	institut national de la recherche scientifique
+1C146B9B	david gesbert	268.294257	0B05FE67	university of oslo
+0B9370B1	dina katabi	266.681124	03D00B37	massachusetts institute of technology
+7BDD31AF	j j garcialunaaceves	259.863561	0349EE07	university of california
+80522E17	jon w mark	257.486880	090B77B3	university of waterloo
+7BDF081F	lutz lampe	253.544651	0875EA92	university of british columbia
+7E0B9FBE	chunming qiao	244.240563	4F1AE805	state university of new york system
+162A29CC	j n laneman	239.736477	066A71BC	university of notre dame
+79D6F54A	zygmunt j haas	230.368776	0C4400FF	cornell university
+7CB9C8C0	paramvir bahl	227.190783	4CE6FC2D	microsoft
+7B8A5E66	naofal aldhahir	224.166115	4C7A9B63	at t
+7EB8A595	dapeng wu	214.846057	0477FFD3	carnegie mellon university
+7D4AA4F2	ramesh govindan	210.115929	0011EAC4	university of southern california
+29083198	victor c m leung	209.195797	0875EA92	university of british columbia
+7F96431C	chengshan xiao	200.815280	04946B1E	university of missouri
+7F2628CC	zhigang cao	197.109718	05E79D01	tsinghua university
+0B360371	paul a anghel	195.635359	07C34834	university of minnesota
+7E24C701	matthew c valenti	193.581880	00B89992	west virginia university
+7AF223B8	edward w knightly	188.167894	4F872588	at t labs
+80CD11E2	xiaodong wang	188.160180	4ECD74BC	alcatel lucent
+18F31469	vahid tarokh	184.448188	03D00B37	massachusetts institute of technology
+75D2874E	simon haykin	183.719160	05DB33D4	mcmaster university
+2AE7B5AF	scott shenker	183.554774	0349EE07	university of california
+7640F79D	martin haenggi	183.491647	066A71BC	university of notre dame
+77B9C138	hlaing minn	182.142348	09B0BBA7	university of texas at dallas
+1042D22A	john heidemann	170.118134	0011EAC4	university of southern california
+7E14CD51	ashutosh sabharwal	169.929925	0474FB72	rice university
+099589D8	wolfgang h gerstacker	168.825969	None	None
+7FC6A25D	mung chiang	167.681104	05C86094	stanford university
+7D27829F	y j zhang	166.849930	0BF77E37	hong kong university of science and technology
+7B250F81	mostafa kaveh	165.581290	07C34834	university of minnesota
+765BB63F	r srikant	161.851366	0966B229	university of illinois at urbana champaign
+10E7927F	elza erkip	161.796283	None	None
+7DEE0A7F	robert morris	161.746613	03D00B37	massachusetts institute of technology
+0B56A9C1	sylvia ratnasamy	157.774881	0349EE07	university of california
+2267E031	stavros toumpis	157.240967	05C86094	stanford university
+83076A10	arogyaswami paulraj	156.930025	05C86094	stanford university
+7F78977A	liuqing yang	150.369071	07C34834	university of minnesota
+798C6D44	venkata n padmanabhan	148.062342	4CE6FC2D	microsoft
+80DA23E8	rick s blum	147.864612	4F872588	at t labs
+85F65248	ben liang	146.961713	0B0ADEB6	university of toronto
+10208CA6	gordon l stuber	146.120734	07CA5884	georgia institute of technology
+7D692F97	xiaodong wang	144.552105	056D3FC6	texas a m university

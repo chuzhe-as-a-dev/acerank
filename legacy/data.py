@@ -308,17 +308,12 @@ def main():
     field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
     for prefix in field_prefixs:
         # a whole procedure must be gone through when time range changes
-        get_paper_affil_graph(prefix)
-        get_citation(prefix)
-        get_core(prefix)
-        get_author_affil(prefix)
-        get_last_factor(prefix)
         # get_paper_affil_graph(prefix)
         # get_citation(prefix)
         # get_core(prefix)
         # get_author_affil(prefix)
         # get_last_factor(prefix)
-        # get_author_hindex(field_prefix)
+        get_author_hindex(field_prefix)
         pass
 
 

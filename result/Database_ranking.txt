@@ -1,0 +1,100 @@
+7F05BE3D	yufei tao	6267.433462	0BF77E37	hong kong university of science and technology
+85B62D7A	dimitris papadias	2421.741902	0BF77E37	hong kong university of science and technology
+7E7A3A69	jiawei han	2016.877120	4FF45383	ibm
+79714738	beng chin ooi	1745.237491	09E3EE34	national university of singapore
+7263AD95	hanspeter kriegel	1685.599163	007D2F41	ludwig maximilian university of munich
+80B9905B	christian s jensen	1385.374416	4CE6FC2D	microsoft
+7FEE7CA3	charu c aggarwal	1313.567601	4FF45383	ibm
+7FB399F0	kianlee tan	1303.728790	09E3EE34	national university of singapore
+1576DFF1	h v jagadish	1232.205947	0966B229	university of illinois at urbana champaign
+80FAA2A4	surajit chaudhuri	1108.342501	4CE6FC2D	microsoft
+7EBD3AAB	jian pei	1075.201867	4FF45383	ibm
+7EAA8442	philip s yu	1064.163557	4FF45383	ibm
+011FA885	nikos mamoulis	968.814720	350410CF	university of hong kong
+8311D172	christos faloutsos	777.822026	4FF45383	ibm
+13FE756D	nick koudas	738.883245	0966B229	university of illinois at urbana champaign
+8318F0E3	dimitris papadias	703.086861	0BF77E37	hong kong university of science and technology
+7DD0E3D6	lei chen	600.982978	0BF77E37	hong kong university of science and technology
+7C880A04	minos garofalakis	521.153488	0966B229	university of illinois at urbana champaign
+7B00A7D0	joseph m hellerstein	519.509412	0349EE07	university of california
+0D288248	walid g aref	500.301191	0D109F83	purdue university
+80509AFE	chengxiang zhai	488.229404	0966B229	university of illinois at urbana champaign
+62B8C0B1	dimitrios gunopulos	439.108224	0349EE07	university of california
+760137D5	david j dewitt	420.314431	05C86094	stanford university
+7F735FC4	reynold cheng	394.169966	0D109F83	purdue university
+2806B3AA	jennifer widom	387.139844	4FF45383	ibm
+80006CCF	michael j franklin	376.226846	0349EE07	university of california
+84309989	george kollios	374.058379	062D596B	university of california riverside
+0E3B95F3	vagelis hristidis	371.638217	0349EE07	university of california
+7EB04793	xuemin lin	365.899577	01E46A0B	university of new south wales
+7BB77CB9	jeffrey f naughton	358.655955	0810AAFA	university of wisconsin madison
+7ED5056A	w bruce croft	352.862847	01776B6C	university of massachusetts amherst
+803A9F8C	bernhard seeger	335.220358	099A4032	university of marburg
+007C16E9	vassilis j tsotras	333.167871	0349EE07	university of california
+055C499B	hanan samet	322.194926	03FD8454	university of maryland college park
+7AF6D7D6	laks v s lakshmanan	320.754736	01A8C383	university of michigan
+0E26BDB3	hector garciamolina	319.006899	0966B229	university of illinois at urbana champaign
+8158A726	eamonn keogh	318.758276	0349EE07	university of california
+7EA3FF3D	kaushik chakrabarti	295.278239	4CE6FC2D	microsoft
+807024D0	alon halevy	279.666976	0C01DCFD	university of washington
+7E52D700	jeffrey xu yu	274.020067	0A97E0C1	the chinese university of hong kong
+805413B2	bongki moon	273.218577	0839CEE3	university of arizona
+7E2B2390	haixun wang	260.800454	4FF45383	ibm
+80D0D239	kyuseok shim	260.475805	4CE6FC2D	microsoft
+7C0F28DE	man lung yiu	255.880594	350410CF	university of hong kong
+7F8C7E64	samuel madden	238.393072	0349EE07	university of california
+794A4CBC	rajeev motwani	238.146808	4CE6FC2D	microsoft
+861F39CD	nick koudas	228.187389	09E3EE34	national university of singapore
+772560B2	michael stonebraker	217.651706	05C86094	stanford university
+8080D0EB	jignesh m patel	216.251651	01A8C383	university of michigan
+1EAFC7AC	gerhard weikum	215.876633	4CE6FC2D	microsoft
+80248B65	divesh srivastava	215.376098	0B0ADEB6	university of toronto
+0738EE84	anthony k h tung	209.680741	09E3EE34	national university of singapore
+8568CB91	flip korn	209.148074	4F872588	at t labs
+7D5A8BF0	ronald fagin	203.791486	4FF45383	ibm
+7D4C3F27	christian bohm	201.527206	007D2F41	ludwig maximilian university of munich
+84F6F3F8	wei wang	201.250739	4FF45383	ibm
+7DBE4309	raymond t ng	196.267312	0112E226	simon fraser university
+12496D58	yannis kotidis	196.051455	03FD8454	university of maryland college park
+7F08E95B	hongjun lu	195.945235	0BF77E37	hong kong university of science and technology
+2988714B	mohamed f mokbel	179.872014	0D109F83	purdue university
+7E689FB7	amr el abbadi	176.202847	0349EE07	university of california
+2B6DC36E	elke a rundensteiner	173.414138	0661DECB	worcester polytechnic institute
+037A45FD	yannis papakonstantinou	173.240868	0349EE07	university of california
+7C34F3B5	johannes gehrke	172.468360	0C4400FF	cornell university
+7DA0BBD3	chinwan chung	170.135203	09630970	kaist
+80FCA44F	raghu ramakrishnan	166.099646	0810AAFA	university of wisconsin madison
+7E80B9BB	mingsyan chen	165.978814	00FF56A8	national taiwan university
+7F427C50	sudipto guha	165.631555	05C86094	stanford university
+80EF24D5	rajeev rastogi	158.586274	0A97E0C1	the chinese university of hong kong
+85ABA12A	donald kossmann	154.993037	021CC5D8	eth zurich
+7E679CA9	brian babcock	145.146241	05C86094	stanford university
+7C51693E	kyriakos mouratidis	143.556419	0BF77E37	hong kong university of science and technology
+7F75CF5C	rakesh agrawal	136.549543	4FF45383	ibm
+7E187CF5	rui zhang	136.091319	09E3EE34	national university of singapore
+7FB6116E	cheeyong chan	134.896672	09E3EE34	national university of singapore
+7AE7C4CB	timos sellis	134.497022	0A6604CB	national technical university of athens
+7E56C2F3	jianliang xu	133.768947	0BF77E37	hong kong university of science and technology
+7EC02502	dik lun lee	132.044137	0BF77E37	hong kong university of science and technology
+80ABCB22	erhard rahm	129.744478	4CE6FC2D	microsoft
+7B5B5847	ramakrishnan srikant	129.591009	4FF45383	ibm
+7E590C88	sunil prabhakar	128.219792	0D109F83	purdue university
+7D481938	philip a bernstein	127.458968	4CE6FC2D	microsoft
+769BEAEB	yasushi sakurai	126.727017	04866877	nara institute of science and technology
+7E8F694E	renee j miller	124.445083	0B0ADEB6	university of toronto
+762E30EE	ihab f ilyas	124.013583	0D109F83	purdue university
+82F02DE8	divesh srivastava	123.864794	09E3EE34	national university of singapore
+7AA7C8E9	ahmed k elmagarmid	123.119723	0D109F83	purdue university
+02FC6B9E	marios hadjieleftheriou	122.651468	0349EE07	university of california
+7F2C3FE7	nicolas bruno	120.271277	4CE6FC2D	microsoft
+8150A0FF	divyakant agrawal	116.753179	0349EE07	university of california
+7FC77763	wangchien lee	116.747897	07CB626B	pennsylvania state university
+7D6EF172	ke wang	111.714307	09E3EE34	national university of singapore
+7F5F589C	sharad mehrotra	111.539468	0349EE07	university of california
+7F19C8F8	wenfei fan	111.345688	0B0ADEB6	university of toronto
+2AC4E69D	elisa bertino	108.390923	0D109F83	purdue university
+80B5F5BD	mong li lee	105.028326	09E3EE34	national university of singapore
+0E5AA1E4	cyrus shahabi	103.127240	0011EAC4	university of southern california
+0CF5797C	hakan ferhatosmanoglu	102.136517	0349EE07	university of california
+012B9460	sihem ameryahia	100.460119	0B0ADEB6	university of toronto
+7FFDDB95	daniel a keim	100.079934	4F872588	at t labs
