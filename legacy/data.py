@@ -366,6 +366,76 @@ def get_author_year_ref(field_prefix):
     cursor.execute(sql)
     #print "View deleted!"
     outfile.close()
+    
+def get_paper_year_ref(field_prefix):
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
+
+    db = MySQLdb.connect(host="localhost",
+                         user="root",
+                         passwd="51314241",
+                         db="RisingStar")
+    outfile = open("../../data/%s_paper_year_ref" % field_prefix, "w")
+    print "successfully connected the db!"
+
+    cursor = db.cursor()
+
+    sql = "CREATE VIEW %s_paper_year_cnt AS(" \
+          "SELECT referencee,PaperPublishYear as year,COUNT(*) as refnum  FROM(" \
+            "(SELECT PaperReferenceID as referencee,PaperID as referencer FROM %sPaperReference) s1" \
+            " NATURAL JOIN" \
+            "(SELECT DISTINCT PaperID as referencer,PaperPublishYear FROM %sPaperAuthor) s2)" \
+            "GROUP BY referencee,PaperPublishYear)" % (field_prefix,field_prefix,field_prefix)
+    cursor.execute(sql)
+
+    sql = "CREATE VIEW %s_author_paper_year_cnt AS(" \
+            "SELECT * FROM(" \
+            "(SELECT AuthorID,PaperID FROM %sPaperAuthor) s1 NATURAL JOIN" \
+            "(SELECT referencee as PaperID ,year,refnum FROM %s_paper_year_cnt) s2)" \
+          "ORDER BY s1.PaperID);" % (field_prefix,field_prefix,field_prefix)
+    cursor.execute(sql)
+
+    #print field_prefix,"view created"
+
+    sql = "SELECT * FROM %s_author_paper_year_cnt" % field_prefix
+    cursor.execute(sql)
+    #print "query execute over!"
+
+    res = cursor.fetchall()
+    i = 0
+    while(i < len(res)):
+        PaperID,AuthorID,year,refnum = res[i][0],res[i][1],res[i][2],res[i][3]
+        paper_year_ref = {}
+        paper_year_ref[year] = refnum
+        minyear = year
+        maxyear = year
+        while (i + 1 < len(res) and res[i + 1][0] == PaperID):
+            y,r = res[i + 1][2],res[i + 1][3]
+            minyear = min(minyear,y)
+            maxyear = max(maxyear,y)
+            if(y in paper_year_ref.keys()):
+                paper_year_ref[y] += r
+            else:
+                paper_year_ref[y] = r
+            i += 1
+        i += 1
+
+        outfile.write("%s " % PaperID)
+        for j in xrange(minyear,maxyear+1,1):
+            if(j in paper_year_ref.keys()):
+                outfile.write("%d:%d " % (j, paper_year_ref[j]))
+            else:
+                outfile.write("%d:%d " % (j, 0))
+        outfile.write("\n")
+
+    sql = "DROP VIEW %s_author_paper_year_cnt" % field_prefix
+    cursor.execute(sql)
+    sql = "DROP VIEW %s_paper_year_cnt" % field_prefix
+    cursor.execute(sql)
+    #print "View deleted!"
+    outfile.close()
 
 def main():
     field_prefixs = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
@@ -378,6 +448,7 @@ def main():
         # get_last_factor(prefix)
         # get_author_hindex(field_prefix)
         get_author_year_ref(field_prefix)
+        get_paper_year_ref(prefix)
         pass
 
 
