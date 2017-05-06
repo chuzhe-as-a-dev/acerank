@@ -4,13 +4,18 @@ import MySQLdb
 time_range_start = 2005
 time_range_end = 2010
 
+db = MySQLdb.connect(host="localhost",
+                    user="acerank",
+                    passwd="0000",
+                    db="RisingStar")
+
 
 def get_paper_affil_graph(field_prefix):
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
     cursor = db.cursor()
 
     # find papers in time range
@@ -43,10 +48,10 @@ def get_affil(field_prefix):
     outfile = open("../data/%s_affil" % field_prefix, "w")
 
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
 
     # execute query
     cursor = db.cursor()
@@ -60,10 +65,10 @@ def get_affil(field_prefix):
 
 def get_citation(field_prefix):
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
 
     # execute query
     cursor = db.cursor()
@@ -94,10 +99,10 @@ def get_core(field_prefix):
         author_referenced[author] = int(referenced)
 
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
 
     # record each paper's author_ids
     paper_authors = dict()
@@ -154,10 +159,10 @@ def get_author_affil(field_prefix):
         affil_auth[affil] = float(auth)
 
     # find each author's affiliation
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
     cursor = db.cursor()
     sql = """
         SELECT DISTINCT AuthorID, AffiliationID
@@ -188,10 +193,10 @@ def get_author_affil(field_prefix):
 
 def get_last_factor(field_prefix):
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
     cursor = db.cursor()
 
     # get author's auth
@@ -251,10 +256,10 @@ def get_last_factor(field_prefix):
 
 
 def get_author_detail(field_prefix):
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
     cursor = db.cursor()
     sql = "SELECT AuthorID, AffiliationID FROM %sPaperAuthor" % field_prefix
     cursor.execute(sql)
@@ -264,10 +269,10 @@ def get_author_detail(field_prefix):
         outfile.write("%s %s\n" % (row[0], row[1]))
 
 def get_author_hindex(field_prefix):
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
 
     outfile = open("../data/%s_author_hindex" % field_prefix, "w")
 
@@ -292,7 +297,7 @@ def get_author_hindex(field_prefix):
             i += 1
         i += 1
 
-        #solve hindex
+        # solve hindex
         hindex = 0
         while(hindex < len(cnt_list)):
             if(hindex >= cnt_list[hindex]):
@@ -302,13 +307,13 @@ def get_author_hindex(field_prefix):
         outfile.write("%s %d\n" % (author_id, hindex))
 
     outfile.close()
- 
+
 
 def get_author_year_ref(field_prefix):
-    db = MySQLdb.connect(host="localhost",
-                         user="acerank",
-                         passwd="0000",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="acerank",
+    #                      passwd="0000",
+    #                      db="RisingStar")
     
     outfile = open("../data/%s_author_year_ref" % field_prefix, "w")
     #print "successfully connected the db!"
@@ -373,10 +378,10 @@ def get_paper_year_ref(field_prefix):
     #                      passwd="0000",
     #                      db="RisingStar")
 
-    db = MySQLdb.connect(host="localhost",
-                         user="root",
-                         passwd="51314241",
-                         db="RisingStar")
+    # db = MySQLdb.connect(host="localhost",
+    #                      user="root",
+    #                      passwd="51314241",
+    #                      db="RisingStar")
     outfile = open("../../data/%s_paper_year_ref" % field_prefix, "w")
     print "successfully connected the db!"
 
@@ -447,9 +452,10 @@ def main():
         # get_author_affil(prefix)
         # get_last_factor(prefix)
         # get_author_hindex(field_prefix)
-        get_author_year_ref(field_prefix)
-        get_paper_year_ref(prefix)
+        get_author_year_ref(prefix)
+        # get_paper_year_ref(prefix)
         pass
+    db.close()
 
 
 if __name__ == '__main__':
