@@ -227,8 +227,8 @@ class Aceranker:
         auth_name = auth_cursor.fetchall()
 
         for i in range(len(auth_name)):
-#             if (i % 1000 == 0):
-#                 self.connection.commit()
+            if (i % 1000 == 0):
+                  self.connection.commit()
 #                 print "##############################################"
 #                 print "layer 1 %.2f" % (100 * float(i) / len(auth_name)) + "%updated"
 #                 print "##############################################"
@@ -292,6 +292,7 @@ class Aceranker:
                             WHERE author_id = "%s" AND field = "%s";''' % (score, core_name, core_field)
             update_cursor.execute(update_sql)
             # print "--final score:%f" % score
+        self.connection.commit()
 
     @timeit
     def update_author_coauthor(self):
@@ -306,8 +307,8 @@ class Aceranker:
             core_field = auth_name[i][1]
 
             # print "Updating "+ core_name
-#             if (i % 1000 == 0):
-#                 self.connection.commit()
+            if (i % 1000 == 0):
+                  self.connection.commit()
 #                 print "##############################################"
 #                 print "layer 2 %.2f" % (100 * float(i) / len(auth_name)) + "%updated"
 #                 print "##############################################"
@@ -361,7 +362,7 @@ class Aceranker:
                             SET coauthor_factor_2 = %f
                             WHERE author_id = "%s" AND field = "%s";''' % (layer_2_score, core_name, core_field)
             update_cursor.execute(update_sql)
-
+        self.connection.commit()
         # outfile.close()
 
     @timeit
