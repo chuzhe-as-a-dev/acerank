@@ -489,7 +489,7 @@ class Aceranker:
                                 author_id,
                                 reference_count
                               FROM new_PaperAuthor
-                                JOIN new_Papers USING (paper_id)
+                                JOIN new_PaperData USING (paper_id)
                                 JOIN new_PaperFieldData USING (paper_id)
                               WHERE field = %s""", (field,))
             for row in cursor.fetchall():
