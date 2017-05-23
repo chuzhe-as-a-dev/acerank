@@ -192,51 +192,178 @@ class Aceranker:
         self.connection.commit()
 
     @timeit
-    def update_author_coauthor(self):
-        for field in self.fields:
-            cursor = self.connection.cursor()
+    def update_author_coauthor_1(self):
+        # create view for the first time
+        # view_cursor = self.connection.cursor()
+        # view_sql = """CREATE VIEW Paper_Author_Year AS
+        #     (SELECT * FROM (
+        #         (SELECT paper_id,author_id FROM new_PaperAuthor) s1
+        #             NATURAL JOIN
+        #         ((SELECT paper_id,publish_year FROM new_PaperData) s2
+        #             NATURAL JOIN
+        #             (SELECT paper_id,field FROM new_PaperFieldData) s3)
+        #     ));"""
+        #
+        # view_cursor.execute(view_sql)
+        # view_sql = '''CREATE VIEW Coauthor_paper_year AS(
+        #               SELECT id1,id2,s1.paper_id,s1.publish_year,s1.field FROM
+        #                 (SELECT author_id as id1,paper_id,publish_year,field FROM Paper_Author_Year) s1
+        #               JOIN
+        #                 (SELECT author_id as id2,paper_id from Paper_Author_Year) s2
+        #               ON id1>id2 AND s1.paper_id = s2.paper_id
+        #             )ORDER BY id1;'''
+        # view_cursor.execute(view_sql)
+        #
+        # view_sql = '''CREATE VIEW new_CoauthorFieldCntYear AS(
+        #                 SELECT id1,id2,publish_year,field,COUNT(paper_id) FROM
+        #                   (SELECT * FROM Coauthor_paper_year ) s1
+        #                 GROUP BY id1,id2,field,publish_year
+        #             );'''
+        # view_cursor.execute(view_sql)
 
-            # fetch coauthor's h_index of each author
-            cursor.execute("""SELECT
-                                AuthorPaper.author_id,
-                                new_PaperAuthor.author_id AS coauthor_id,
-                                h_index
-                              FROM new_PaperAuthor
-                                JOIN new_AuthorFieldData USING (author_id)
-                                JOIN (SELECT
-                                        author_id,
-                                        paper_id
-                                      FROM new_PaperAuthor
-                                        JOIN new_PaperFieldData USING (paper_id)
-                                      WHERE field = %s) AuthorPaper USING (paper_id);""", (field,))
+        auth_cursor = self.connection.cursor()
+        auth_sql = "SELECT author_id,field,citation FROM new_AuthorFieldData;"
+        auth_cursor.execute(auth_sql)
+        auth_name = auth_cursor.fetchall()
 
-            author_coauthors = {}
-            for row in cursor.fetchall():
-                author_id = row[0]
-                coauthor_id = row[1]
-                h_index = row[2]
-                if author_coauthors.has_key(author_id):
-                    author_coauthors[author_id].append((coauthor_id, h_index))
+        for i in range(len(auth_name)):
+            if (i % 1000 == 0):
+                  self.connection.commit()
+#                 print "##############################################"
+#                 print "layer 1 %.2f" % (100 * float(i) / len(auth_name)) + "%updated"
+#                 print "##############################################"
+
+            core_name = auth_name[i][0]
+            core_field = auth_name[i][1]
+            core_citation = int(auth_name[i][2])
+
+            # print "UPDATING "+ core_field + ":" + core_name
+            # intial score
+            score = float(core_citation)
+            # print "--intial score:%f" % score
+
+            # search for layer 1
+            co_cursor = self.connection.cursor()
+            co_sql = '''SELECT id1,id2,publish_year,cnt FROM new_CoauthorFieldCntYear 
+                          WHERE ((id1 = "%s" OR id2 = "%s") AND field = "%s");
+                          ''' % (core_name, core_name, core_field)
+
+            co_cursor.execute(co_sql)
+            co_name = co_cursor.fetchall()
+
+            expsum = 0.0
+            countsum = 0.0
+            # updating first layer
+            for j in range(len(co_name)):
+                layer_co_year = int(co_name[j][2])
+                if (layer_co_year < self.start_year or layer_co_year > self.end_year):
+                    # print "skip for year"
+                    continue
+
+                if (co_name[j][0] == core_name):
+                    layer_name = co_name[j][1]
                 else:
-                    author_coauthors[author_id] = [(coauthor_id, h_index)]
+                    layer_name = co_name[j][0]
 
-            # calculate the coauthor factor
-            for author_id, coauthors in author_coauthors.iteritems():
-                result = 0.0
+                layer_co_cnt = int(co_name[j][3])
+                # print "--%d papers with %s in %d" % (layer_co_cnt,layer_name,layer_co_year)
 
-                # prepare for normalization
-                h_index_factor_sum = sum([self.h_index_factor(h_index) for _, h_index in coauthors])
-                if h_index_factor_sum != 0:
-                    for coauthor_id, h_index in coauthors:
-                        result += 1.0 * h_index * self.h_index_factor(h_index) / h_index_factor_sum
+                layer_cursor = self.connection.cursor()
 
-                # update database
-                cursor.execute("""UPDATE new_AuthorFieldData
-                                  SET coauthor_factor = %s
-                                  WHERE author_id = %s AND field = %s;""", (result, author_id, field))
+                layer_sql = """SELECT h_index,citation FROM new_AuthorFieldData
+                              WHERE (author_id = "%s"AND field = "%s");""" % (layer_name, core_field)
+                layer_cursor.execute(layer_sql)
+                temp = layer_cursor.fetchall()
+                if (temp):
+                    layer_count = float(temp[0][0])
+                    layer_hindex = float(temp[0][1])
+                else:
+                    continue
 
-            # finished!
-            self.connection.commit()
+                expsum += layer_co_cnt * e ** (atan(layer_hindex))
+                countsum += layer_co_cnt * layer_count * e ** (atan(layer_hindex))
+            if (expsum != 0):
+                score += countsum / expsum
+
+            # outfile.write("%s %s %f\n" % (core_name, core_field, score))
+            update_cursor = self.connection.cursor()
+            update_sql = '''UPDATE new_AuthorFieldData
+                            SET coauthor_factor_1 = %f
+                            WHERE author_id = "%s" AND field = "%s";''' % (score, core_name, core_field)
+            update_cursor.execute(update_sql)
+            # print "--final score:%f" % score
+        self.connection.commit()
+
+    @timeit
+    def update_author_coauthor(self):
+        self.update_author_coauthor_1()
+        auth_cursor = self.connection.cursor()
+        auth_sql = "SELECT author_id,field FROM new_AuthorFieldData;"
+        auth_cursor.execute(auth_sql)
+        auth_name = auth_cursor.fetchall()
+
+        for i in range(len(auth_name)):
+            core_name = auth_name[i][0]
+            core_field = auth_name[i][1]
+
+            # print "Updating "+ core_name
+            if (i % 1000 == 0):
+                  self.connection.commit()
+#                 print "##############################################"
+#                 print "layer 2 %.2f" % (100 * float(i) / len(auth_name)) + "%updated"
+#                 print "##############################################"
+
+            # search for layer 1
+            co_cursor = self.connection.cursor()
+            co_sql = '''SELECT id1,id2,publish_year,cnt FROM new_CoauthorFieldCntYear 
+                          WHERE ((id1 = "%s" OR id2 = "%s") AND field = "%s");
+                          ''' % (core_name, core_name, core_field)
+            co_cursor.execute(co_sql)
+            co_name = co_cursor.fetchall()
+
+            expsum = 0.0
+            countsum = 0.0
+
+            # calculate for core
+            for j in range(len(co_name)):
+                layer_co_year = int(co_name[j][2])
+                if (layer_co_year < self.start_year or layer_co_year > self.end_year):
+                    continue
+
+                if (co_name[j][0] == core_name):
+                    layer_name = co_name[j][1]
+                else:
+                    layer_name = co_name[j][0]
+
+                layer_co_cnt = int(co_name[j][3])
+
+                # search for layer 1 value
+                layer_cursor = self.connection.cursor()
+                layer_sql = """SELECT coauthor_factor_1,h_index FROM new_AuthorFieldData
+                              WHERE author_id = "%s" AND field = "%s";""" % (layer_name, core_field)
+                layer_cursor.execute(layer_sql)
+                temp = layer_cursor.fetchall()
+                if (temp):
+                    layer_1_score = float(temp[0][0])
+                    layer_1_hinex = float(temp[0][1])
+                else:
+                    continue
+
+                expsum += layer_co_cnt * e ** (atan(layer_1_hinex))
+                countsum += layer_co_cnt * e ** (atan(layer_1_hinex))
+            if (expsum != 0):
+                layer_2_score = countsum / expsum
+            else:
+                layer_2_score = 0.0
+            # print "final score: "+ str(layer_2_score)
+            # outfile.write("%s %s %f\n" % (core_name, core_field, layer_2_score))
+            update_cursor = self.connection.cursor()
+            update_sql = '''UPDATE new_AuthorFieldData
+                            SET coauthor_factor_2 = %f
+                            WHERE author_id = "%s" AND field = "%s";''' % (layer_2_score, core_name, core_field)
+            update_cursor.execute(update_sql)
+        self.connection.commit()
+        # outfile.close()
 
     @timeit
     def update_author_affiliation(self):
@@ -362,7 +489,7 @@ class Aceranker:
                                 author_id,
                                 reference_count
                               FROM new_PaperAuthor
-                                JOIN new_Papers USING (paper_id)
+                                JOIN new_PaperData USING (paper_id)
                                 JOIN new_PaperFieldData USING (paper_id)
                               WHERE field = %s""", (field,))
             for row in cursor.fetchall():
