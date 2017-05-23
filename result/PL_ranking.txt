@@ -1,8 +1,5 @@
 80317135	mark harman	4514.635943	038AE3AA	brunel university london
-19201BBC	mary jean harrold	3082.796493	07CA5884	georgia institute of technology
-74381F8F	gregg rothermel	2118.075564	03FD8454	university of maryland college park
 7FD35A4C	lionel c briand	1919.164636	004B1FBC	fraunhofer society
-7D4C0E2F	michael ernst	1163.582562	03D00B37	massachusetts institute of technology
 29E1ABD3	audris mockus	1089.375076	4C7A9B63	at t
 808ADBC8	matthew b dwyer	969.530295	4C5370B9	ames research center
 7F886E7C	barbara g ryder	968.785692	4FF45383	ibm
@@ -12,20 +9,17 @@
 7D30EA44	gail c murphy	737.869872	0875EA92	university of british columbia
 855FFED2	nachiappan nagappan	727.476875	083839C7	north carolina state university
 0FA216E9	sebastian elbaum	717.107457	06D18AFD	university of nebraska lincoln
-147A0693	martin rinard	704.827840	03D00B37	massachusetts institute of technology
 818A3DCE	giuliano antoniol	698.619902	00F94921	university of sannio
 14592651	thomas reps	695.568599	0810AAFA	university of wisconsin madison
 8104A982	frank tip	691.067284	4FF45383	ibm
 7698A580	alessandro orso	628.031075	07CA5884	georgia institute of technology
 12DAB89A	jonathan i maletic	614.177019	05A45DE2	university of memphis
 80484673	chinyu huang	609.597752	00FF56A8	national taiwan university
-7B3AD69E	alex aiken	578.185593	05C86094	stanford university
 7B4DA5C9	barry boehm	533.861604	4FF45383	ibm
 7A2271D4	andy podgurski	518.194411	03839B48	case western reserve university
 5851D2BB	premkumar devanbu	491.017665	0349EE07	university of california
 7EECF819	james a jones	477.839006	07CA5884	georgia institute of technology
 80945B34	xiangyu zhang	462.406988	0839CEE3	university of arizona
-7EFA6D4B	cormac flanagan	454.872833	0349EE07	university of california
 7F5E2DC9	martin p robillard	451.698421	004CA7A3	mcgill university
 1C6E8D3D	david notkin	428.152579	0C01DCFD	university of washington
 7F2757B5	craig chambers	419.427275	0C01DCFD	university of washington
@@ -45,9 +39,6 @@
 7DE5EBA2	william g griswold	302.046022	0349EE07	university of california
 0312A729	atanas rountev	267.068884	031EE95E	ohio state university
 7C33BA1C	sriram k rajamani	265.366977	4CE6FC2D	microsoft
-7F535E45	monica s lam	259.330487	05C86094	stanford university
-80F7AFD3	dawson r engler	259.256439	05C86094	stanford university
-7877F6A6	thomas a henzinger	252.938394	0349EE07	university of california
 2A5EF2B2	k rustan m leino	244.830121	4CE6FC2D	microsoft
 789561CB	nenad medvidovic	244.798997	0011EAC4	university of southern california
 13A4E9FF	steve easterbrook	242.876539	0B0ADEB6	university of toronto
@@ -98,3 +89,12 @@
 291B2AA3	rajeev alur	143.177038	0349EE07	university of california
 7AA98137	laurie hendren	136.522886	004CA7A3	mcgill university
 81AF4D0C	laurie williams	134.348939	083839C7	north carolina state university
+809DF862	koushik sen	133.836485	0966B229	university of illinois at urbana champaign
+7253CBA5	david binkley	132.351106	09DE2F57	loyola university maryland
+76563FF4	shaz qadeer	130.957642	4CE6FC2D	microsoft
+780749F3	stephane ducasse	126.093571	071126B7	university of bern
+05266311	claes wohlin	124.819711	0B2D8123	lund university
+7EC2E7E9	kevin sullivan	124.778009	0312B01D	university of virginia
+77E2D23E	victor r basili	124.057310	03FD8454	university of maryland college park
+02A1AAB9	ana milanova	121.422693	06194FDE	rutgers university
+7FDD206A	yijun yu	121.335621	0B0ADEB6	university of toronto

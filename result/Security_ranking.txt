@@ -1,6 +1,4 @@
-0C07A6C6	dan boneh	2952.400677	05C86094	stanford university
 775045AA	jan camenisch	1780.682365	4FF45383	ibm
-28FB3C46	ran canetti	1534.359022	4FF45383	ibm
 7BE686A2	david pointcheval	756.715940	01C3C549	ecole normale superieure
 76318B69	ivan damgard	688.286459	0C2DEF79	aarhus university
 7DAD7D10	rosario gennaro	575.545732	4FF45383	ibm
@@ -27,7 +25,6 @@
 0E75F34B	hovav shacham	212.241098	05C86094	stanford university
 07E064F5	marc fischlin	211.659995	021CC5D8	eth zurich
 0E1653CA	leonid reyzin	206.947757	03D00B37	massachusetts institute of technology
-7DB6AC93	david wagner	183.842434	0349EE07	university of california
 7FFD257E	matthew franklin	174.026170	0349EE07	university of california
 015BFB18	serge vaudenay	173.352811	01C3C549	ecole normale superieure
 03E80959	oded goldreich	162.012317	03376F29	weizmann institute of science
@@ -37,11 +34,9 @@
 02C8FB9F	ari juels	143.767722	4FBE47A5	rsa
 77479926	birgit pfitzmann	140.316633	4FF45383	ibm
 84F6273A	amit sahai	140.051498	099D876D	university of california los angeles
-7F08534C	dawn song	138.819241	0349EE07	university of california
 54A07336	michael k reiter	138.076050	0477FFD3	carnegie mellon university
 62234CD4	kaoru kurosawa	137.049714	06D39D72	tokyo institute of technology
 7CA3000D	rafael pass	134.156632	4FF45383	ibm
-83ED96BF	adrian perrig	131.985053	0349EE07	university of california
 7FC09AA3	michel abdalla	129.510111	01C3C549	ecole normale superieure
 7CDDE7E6	yvo desmedt	129.346730	02B09E25	university college london
 7AA52464	markus jakobsson	127.273480	044C0559	bell labs
@@ -98,3 +93,8 @@
 7A92CFC6	sushil jajodia	50.091066	09B2D407	george mason university
 6A31A785	emmanuel bresson	50.053118	01C3C549	ecole normale superieure
 7B3CFE42	susan hohenberger	49.909695	03D00B37	massachusetts institute of technology
+7E6EE63F	sean w smith	49.246898	066AF386	dartmouth college
+862F137D	benny pinkas	48.453062	01328BF3	princeton university
+21FD51F0	gene itkis	48.111174	069F11AE	boston university
+7F734F2A	jens groth	48.021432	099D876D	university of california los angeles
+7DCF781A	nigel p smart	47.426725	0228E4F2	university of bristol

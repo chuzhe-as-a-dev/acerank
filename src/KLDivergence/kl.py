@@ -86,8 +86,9 @@ def main():
                     sim_author = expert
             # prevent the star has already become the expert
             if star == sim_author:
-                continue
-            f.write("%s\t%s\t%f\n" % (star, sim_author, maxent))
+                f.write("%s\tEXPERT\n" % star)
+            else:
+                f.write("%s\t%s\t%f\n" % (star, sim_author, maxent))
         f.close()
 
 

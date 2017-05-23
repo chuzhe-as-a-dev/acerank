@@ -1,4 +1,3 @@
-7EF737CE	ravin balakrishnan	2607.409015	0B0ADEB6	university of toronto
 7B7BA2CB	carl gutwin	1590.157768	01F1D439	university of saskatchewan
 7C74BA20	steve benford	1474.581725	087AC4EF	university of nottingham
 7BF4B90F	shumin zhai	1334.887735	4FF45383	ibm
@@ -98,3 +97,4 @@
 800027F2	christian heath	78.381850	0AF6A309	king s college london
 7C21B8B8	keith cheverst	77.776537	0404AD5B	lancaster university
 79D7A0DD	kenton ohara	77.750401	0228E4F2	university of bristol
+77E15DB4	nicolas ducheneaut	77.596922	02066FCD	xerox

@@ -16,5 +16,3 @@ function generate_distribution!(a::Array{Float64})
     a = map(x -> x / s, a)
     return a
 end
-
-

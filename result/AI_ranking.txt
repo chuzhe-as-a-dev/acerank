@@ -1,46 +1,24 @@
-7DE04C22	cordelia schmid	9407.973218	4F10C1EB	french institute for research in computer science and automation
-7D6D8078	david lowe	4201.617149	0875EA92	university of british columbia
-7DA5EAC4	pietro perona	4006.785962	074BDB0A	california institute of technology
-7897DAF1	andrew zisserman	3876.531475	4CE6FC2D	microsoft
-7A8B1944	krystian mikolajczyk	2764.564492	4F10C1EB	french institute for research in computer science and automation
-8092A8AC	antonio torralba	2626.157342	03D00B37	massachusetts institute of technology
-7AA198B6	bill triggs	2345.869644	4D2B1EE6	centre national de la recherche scientifique
 7FA2F1F8	bastian leibe	2223.499559	01E0D8CE	technische universitat darmstadt
 609DA0A6	bernt schiele	1998.804833	03D00B37	massachusetts institute of technology
-7C2B867D	andrew zisserman	1916.204203	4CE6FC2D	microsoft
-7D404B2E	martial hebert	1859.206288	0477FFD3	carnegie mellon university
-7F960928	takeo kanade	1787.643233	0477FFD3	carnegie mellon university
 752CFFDC	tinne tuytelaars	1641.631230	05EDB3A0	katholieke universiteit leuven
-7DED7D82	william t freeman	1521.997966	03D00B37	massachusetts institute of technology
-7D6E9EF4	andrew y ng	1519.230173	05C86094	stanford university
 7DA47D8F	philip h s torr	1372.585816	4CE6FC2D	microsoft
-811F6D98	rob fergus	1245.679276	02642F55	university of oxford
 13E99422	pascal fua	1243.982921	01C3C549	ecole normale superieure
-7A3D39A8	paul viola	1225.443080	4CE6FC2D	microsoft
-776A2D79	david forsyth	1184.072994	0349EE07	university of california
 3136F01E	josef sivic	1147.786778	02642F55	university of oxford
-7BBC933B	sebastian thrun	1113.109545	0477FFD3	carnegie mellon university
 7F5944CA	jitendra malik	1053.424748	0349EE07	university of california
-12375F79	serge belongie	982.053723	0349EE07	university of california
 7F86B895	stan z li	972.541681	09E3EE34	national university of singapore
 7CCC9290	ying wu	931.407058	0966B229	university of illinois at urbana champaign
-7F8038BA	michael i jordan	908.663432	05B090CE	university of california berkeley
 7D67485A	luc van gool	837.250878	05EDB3A0	katholieke universiteit leuven
 7B16FD3C	alan yuille	819.405890	0349EE07	university of california
 0C50D565	vincent lepetit	817.532212	01C3C549	ecole normale superieure
 08961C42	cristian sminchisescu	801.765145	4F10C1EB	french institute for research in computer science and automation
 811EE217	xiaoou tang	800.275138	4CE6FC2D	microsoft
 7E38E131	roberto cipolla	782.204314	4CE6FC2D	microsoft
-8164E368	ivan laptev	774.268905	4F10C1EB	french institute for research in computer science and automation
 7A1958AD	horst bischof	767.294323	08B17323	vienna university of technology
-8020C741	thomas s huang	747.834829	0966B229	university of illinois at urbana champaign
-812FF69E	daphne koller	744.692509	05C86094	stanford university
 81A3A4B8	trevor darrell	726.749558	03D00B37	massachusetts institute of technology
 7E98F775	larry s davis	718.518309	03FD8454	university of maryland college park
 147AC466	stefano soatto	711.197264	0349EE07	university of california
 7E720E7D	alexander c berg	708.069661	0349EE07	university of california
 7DE99E22	minghsuan yang	697.128275	0966B229	university of illinois at urbana champaign
-093FC66C	pedro f felzenszwalb	661.628475	03D00B37	massachusetts institute of technology
 7A77F856	dorin comaniciu	648.252716	4F076E00	siemens
 80F462CD	greg mori	640.766636	0349EE07	university of california
 7F327A66	zhuowen tu	640.400545	0349EE07	university of california
@@ -49,14 +27,10 @@
 147E24FE	wolfram burgard	606.678808	09995E41	university of freiburg
 55A428AB	rahul sukthankar	588.931786	0477FFD3	carnegie mellon university
 80D515D7	shaogang gong	587.703151	09EA1A37	queen mary university of london
-8003BF52	heungyeung shum	576.287278	0011EAC4	university of southern california
 7C838041	kristen grauman	570.963357	03D00B37	massachusetts institute of technology
 7E5FB75C	ian reid	565.209514	02642F55	university of oxford
 815BC45F	jian sun	563.691428	4CE6FC2D	microsoft
 7DA3833A	l van gool	483.573182	05EDB3A0	katholieke universiteit leuven
-7C7C881B	alexei a efros	481.994065	0477FFD3	carnegie mellon university
-285C426B	daniel p huttenlocher	478.953897	0C4400FF	cornell university
-815A9F34	navneet dalal	475.754040	4F10C1EB	french institute for research in computer science and automation
 291461F7	stan sclaroff	470.029898	069F11AE	boston university
 7D8A68CE	rama chellappa	458.156013	03FD8454	university of maryland college park
 4C219B89	ahmed elgammal	449.617654	03FD8454	university of maryland college park
@@ -68,7 +42,6 @@
 7A414742	ram nevatia	383.057776	0011EAC4	university of southern california
 77575A32	jianbo shi	381.573283	0477FFD3	carnegie mellon university
 7DF75F39	michael j black	379.733362	4CE6FC2D	microsoft
-11BA75DA	bernhard scholkopf	379.164412	08EF476D	max planck society
 818F5DC2	lei zhang	379.054155	09E3EE34	national university of singapore
 7F76DA6C	jean ponce	377.799760	0966B229	university of illinois at urbana champaign
 80AB241A	tieniu tan	370.118538	012E6F4E	chinese academy of sciences
@@ -81,15 +54,12 @@
 76B79681	dimitris metaxas	343.299112	04BE3F72	university of pennsylvania
 7E65F56B	aude oliva	341.795920	08B4B7FF	harvard medical school
 7F9981B5	visvanathan ramesh	341.774074	4F076E00	siemens
-7572D13D	richard szeliski	336.648453	4CE6FC2D	microsoft
 7ABB8CA9	lior wolf	333.722175	03D00B37	massachusetts institute of technology
 7629A0E6	kostas daniilidis	332.078127	04BE3F72	university of pennsylvania
-132A9E2F	david m blei	329.104104	05B090CE	university of california berkeley
 79B55EC5	nikos paragios	324.829012	4F076E00	siemens
 14B23BBD	frederik schaffalitzky	311.363572	02642F55	university of oxford
 7AE8FFFC	james m rehg	303.941953	07CA5884	georgia institute of technology
 07C6C8C9	amnon shashua	294.860741	05C86094	stanford university
-80DDA9E9	anil k jain	294.376773	0532D181	michigan state university
 758EC809	alexander j smola	291.914070	08EF476D	max planck society
 0FC79C17	frank dellaert	287.642230	0477FFD3	carnegie mellon university
 76FA67EE	tomas pajdla	283.325548	02642F55	university of oxford
@@ -98,3 +68,33 @@
 057F50B8	arnold w m smeulders	279.827858	34DF872C	university of amsterdam
 607AD246	silvio savarese	279.343083	074BDB0A	california institute of technology
 7EE6247D	narendra ahuja	274.753202	0966B229	university of illinois at urbana champaign
+7FC0BD60	adrien bartoli	274.564826	4F10C1EB	french institute for research in computer science and automation
+72470B6A	derek hoiem	269.873926	0477FFD3	carnegie mellon university
+137327F2	danica kragic	268.407043	052F5108	royal institute of technology
+7A0307AC	edwin r hancock	258.902903	0B78A521	york university
+0BD7E921	erik b sudderth	257.851958	03D00B37	massachusetts institute of technology
+06189845	antonio criminisi	255.210624	4CE6FC2D	microsoft
+099CC839	yoshua bengio	251.032891	043A55FE	universite de montreal
+79603953	shree k nayar	250.457644	04AF010A	columbia university
+7F801EF4	yan ke	250.133335	0477FFD3	carnegie mellon university
+7D4A2F73	xiaofeng ren	244.626559	0349EE07	university of california
+777EB519	michael isard	244.135496	4CE6FC2D	microsoft
+85579A80	trevor darrell	243.132971	03D00B37	massachusetts institute of technology
+7D75E422	shimon ullman	242.939877	03376F29	weizmann institute of science
+764E3BCE	li feifei	236.845650	074BDB0A	california institute of technology
+5D39416E	ben taskar	233.709962	05C86094	stanford university
+805BC0E1	daniel cremers	233.643735	0349EE07	university of california
+7F20C7DE	gang hua	231.588136	06ACAD91	northwestern university
+7EECEF6D	josef kittler	231.360985	01AFAF1B	university of surrey
+7DC62C69	ales leonardis	228.378425	092D7CCF	university of ljubljana
+0FBC3DC6	charless c fowlkes	222.880131	0349EE07	university of california
+7F80E4F8	sing bing kang	219.626503	4CE6FC2D	microsoft
+7C4F1DED	f fleuret	211.573217	4F10C1EB	french institute for research in computer science and automation
+8597D8DE	timor kadir	209.500010	02642F55	university of oxford
+295C8CBD	tomaso poggio	209.404834	03D00B37	massachusetts institute of technology
+7FAA8B2D	qiang ji	208.836878	09E1E653	rensselaer polytechnic institute
+218FC062	geoffrey e hinton	206.163774	0B0ADEB6	university of toronto
+7F7946BD	joachim weickert	205.720979	05776AD7	saarland university
+7EE604E1	henrik i christensen	203.239350	052F5108	royal institute of technology
+85754044	koby crammer	202.514366	04BE3F72	university of pennsylvania
+7FE30EDB	yi ma	198.616104	0966B229	university of illinois at urbana champaign
