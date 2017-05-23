@@ -6,6 +6,7 @@ import time
 global authors
 global experts
 global stars
+global id2name
 MAXINT = 10000000.
 
 
@@ -28,9 +29,11 @@ def getExpert(field):
     for line in lines:
         line.strip()
         line = line[:-1]
+        expert = line.split('\t')
         # make sure the expert is in the database
-        if line in authors:
-            experts.append(line)
+        if expert[0] in authors:
+            experts.append(expert[0])
+            id2name[expert[0]] = expert[1]
     f.close()
 
 
@@ -40,10 +43,11 @@ def getStar(field):
     for line in lines:
         line.strip()
         line = line[:-1]
-        star = line.split('\t')[0]
+        star = line.split('\t')
         # make sure the star is in the database
-        if star in authors:
-            stars.append(star)
+        if star[0] in authors:
+            stars.append(star[0])
+            id2name[star[0]] = star[1]
     f.close()
 
 
@@ -61,11 +65,12 @@ def calculate_relent(p, q):
 
 
 def main():
-    global authors, experts, stars
+    global authors, experts, stars, id2name
     fields = ["AI", "Architecture", "CG", "Database", "HCI", "Network", "PL", "Security", "Theory"]
     for field in fields:
         # init global variables
         authors = {}
+        id2name = {}
         experts = []
         stars = []
         print "Start process %s at %s" % (field, time.ctime())
@@ -86,9 +91,9 @@ def main():
                     sim_author = expert
             # prevent the star has already become the expert
             if star == sim_author:
-                f.write("%s\tEXPERT\n" % star)
+                f.write("%s\t%s\tEXPERT\n" % (star, id2name[star]))
             else:
-                f.write("%s\t%s\t%f\n" % (star, sim_author, maxent))
+                f.write("%s\t%s\t%s\t%s\t%f\n" % (star, id2name[star], sim_author, id2name[sim_author], maxent))
         f.close()
 
 
