@@ -1,7 +1,7 @@
 import MySQLdb
 import snap
 
-from math import pi, atan
+from math import pi, atan, e
 from time import time
 
 
@@ -121,7 +121,7 @@ class Aceranker:
                     affiliation_id = node_data_map[node_id]
                     affiliation_auth = auth_map[node_id]
                     cursor.execute("""UPDATE new_AffiliationFieldData
-                                      SET hits_auth = %s
+                                      SET affiliation_auth = %s
                                       WHERE affiliation_id = %s AND field = %s""",
                                    (affiliation_auth, affiliation_id, field))
 
@@ -135,16 +135,16 @@ class Aceranker:
 
         # update reference count of each paper if necessary
         if paper_reference_changed:
-            cursor.execute("""UPDATE new_Papers
+            cursor.execute("""UPDATE RisingStar.new_PaperData
                               SET reference_count = (SELECT count(*)
                                                      FROM new_PaperReference
-                                                     WHERE reference_id = new_Papers.paper_id);""")
+                                                     WHERE reference_id = new_PaperData.paper_id);""")
 
         # update citation in each field of each author
         cursor.execute("""UPDATE new_AuthorFieldData
                           SET citation = (SELECT ifnull(sum(reference_count), 0)
                                           FROM new_PaperAuthor
-                                            JOIN new_Papers USING (paper_id)
+                                            JOIN new_PaperData USING (paper_id)
                                             JOIN new_PaperFieldData USING (paper_id)
                                           WHERE new_PaperAuthor.author_id = new_AuthorFieldData.author_id AND
                                                 new_PaperFieldData.field = new_AuthorFieldData.field AND
@@ -155,7 +155,7 @@ class Aceranker:
         # pull all paper's citation
         paper_citation = {}
         cursor.execute("""SELECT paper_id, reference_count
-                          FROM new_Papers
+                          FROM new_PaperData
                           WHERE publish_year >= %s AND publish_year <= %s;""", (self.start_year, self.end_year))
         for row in cursor.fetchall():
             paper_citation[row[0]] = row[1]
@@ -377,7 +377,7 @@ class Aceranker:
                                 affiliation_id,
                                 affiliation_auth
                               FROM new_PaperAuthor
-                                JOIN new_Papers USING (paper_id)
+                                JOIN new_PaperData USING (paper_id)
                                 JOIN new_PaperFieldData USING (paper_id)
                                 JOIN new_AffiliationFieldData USING (affiliation_id, field)
                               WHERE field = %s AND publish_year >= %s AND publish_year <= %s;""",
@@ -428,7 +428,7 @@ class Aceranker:
                                 1 / author_sequence_num
                               FROM new_PaperAuthor
                                 JOIN new_PaperFieldData USING (paper_id)
-                                JOIN new_Papers USING (paper_id)
+                                JOIN new_PaperData USING (paper_id)
                               WHERE field = %s AND publish_year >= %s AND publish_year <= %s""",
                            (field, self.start_year, self.end_year))
             for row in cursor.fetchall():
@@ -446,7 +446,7 @@ class Aceranker:
                                 paper_id,
                                 pagerank,
                                 ifnull(venue_auth, 0)
-                              FROM new_Papers
+                              FROM new_PaperData
                                 JOIN new_PaperFieldData USING (paper_id)
                                 LEFT JOIN new_VenueFieldData USING (venue_id, field)
                               WHERE field = %s AND 
@@ -592,13 +592,15 @@ class Aceranker:
         self.update_author_h_index()
         self.shallow_rank()
 
+
     def h_index_factor(self, h_index):
         return h_index
 
 
 def main():
-    ranker = Aceranker(start_year=2000, end_year=2005,
+    ranker = Aceranker(start_year=2010, end_year=2015,
                        self_citation_factor=0.2, coauthor_factor=0.2, affiliation_factor=0.1, paper_factor=0.5)
+    ranker.deep_rank()
     ranker.show_result()
 
 

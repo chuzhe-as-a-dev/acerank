@@ -18,3 +18,4 @@ legacy/aminer.txt
 legacy/pagerank/
 result/.DS_Store
 src/.DS_Store
+src/temp.py
