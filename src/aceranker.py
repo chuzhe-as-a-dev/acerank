@@ -359,7 +359,7 @@ class Aceranker:
             # outfile.write("%s %s %f\n" % (core_name, core_field, layer_2_score))
             update_cursor = self.connection.cursor()
             update_sql = '''UPDATE new_AuthorFieldData
-                            SET coauthor_factor_2 = %f
+                            SET coauthor_factor = %f
                             WHERE author_id = "%s" AND field = "%s";''' % (layer_2_score, core_name, core_field)
             update_cursor.execute(update_sql)
         self.connection.commit()
@@ -584,8 +584,8 @@ class Aceranker:
 
     @timeit
     def deep_rank(self):
-        self.update_affiliation_hits()
-        self.update_author_citation(paper_reference_changed=True)
+        # self.update_affiliation_hits()
+        # self.update_author_citation(paper_reference_changed=True)
         self.update_author_coauthor()
         self.update_author_affiliation()
         self.update_author_paper()

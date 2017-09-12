@@ -19,3 +19,5 @@ legacy/pagerank/
 result/.DS_Store
 src/.DS_Store
 src/temp.py
+src/*.txt
+result/
